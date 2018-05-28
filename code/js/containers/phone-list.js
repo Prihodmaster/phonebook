@@ -6,8 +6,11 @@ class PhoneList extends Component{
     render() {
         return(
             <ul>
-                <li>1</li>
-                <li>2</li>
+                {
+                    this.props.phones.map((item, i) => {
+                        return(<li key={i} index={i}>{item.phone}</li>)
+                })
+                }
             </ul>
         )
     }
